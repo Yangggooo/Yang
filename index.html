@@ -142,7 +142,18 @@ books.forEach((b,bi)=>{
  pastLayers[bi]=nativeLines(A,map,[],{color:travelledColor,weight:4.5,opacity:1,zIndex:41});
 });
 const active=nativeLines(A,map,[],{color:travelledColor,weight:5,opacity:1,zIndex:42});
-const carSvg='<div class="car-body"><svg viewBox="0 0 32 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="小汽车"><rect x="1" y="10" width="5" height="10" rx="2" fill="#273541"/><rect x="26" y="10" width="5" height="10" rx="2" fill="#273541"/><rect x="1" y="34" width="5" height="10" rx="2" fill="#273541"/><rect x="26" y="34" width="5" height="10" rx="2" fill="#273541"/><rect x="4" y="1" width="24" height="50" rx="9" fill="#f6fafb" stroke="#254d66" stroke-width="1.5"/><path d="M7 16L9 11H23L25 16L23 22H9Z" fill="#497791"/><rect x="9" y="23" width="14" height="13" rx="3" fill="#dce9ed"/><path d="M9 38H23L25 44H7Z" fill="#497791"/><path d="M7 6H12M20 6H25" stroke="#ffe695" stroke-width="3" stroke-linecap="round"/><path d="M7 47H12M20 47H25" stroke="#e0574d" stroke-width="2.5" stroke-linecap="round"/></svg></div>';
+const carSvg=`<div class="car-body"><svg viewBox="0 0 32 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="沃尔沃 S90">
+ <path d="M3 10h4v10H3zm22 0h4v10h-4zM3 33h4v10H3zm22 0h4v10h-4z" fill="#16232e"/>
+ <path d="M6 16H3l-1 4h5m19-4h3l1 4h-5" fill="#dce4ec" stroke="#344f64"/>
+ <path d="M8 2Q16 .4 24 2L27 6V44Q27 49 23 50H9Q5 49 5 44V6Z" fill="#dce4ec" stroke="#304d61" stroke-width="1.4"/>
+ <path d="M8 9h16l-2 5H10z" fill="#edf3f8"/>
+ <path d="M8 16l3-3h10l3 3-2 7H10zM10 37h12l2 5H8z" fill="#385a71"/>
+ <path d="M8 24h2v11H8zm14 0h2v11h-2z" fill="#4a6b80"/>
+ <path d="M11 24h10v12H11z" fill="#edf3f8"/>
+ <path d="M7 6h6m-2 0v3m8-3h6m-4 0v3" stroke="#f8faff" stroke-width="2" stroke-linecap="round"/>
+ <path d="M13 3.5h6l-1 3h-4z" fill="#314656"/><path d="M14 6l4-2" stroke="#dce4ec" stroke-width=".7"/>
+ <path d="M7 44v3h6m12-3v3h-6" fill="none" stroke="#f04b55" stroke-width="2" stroke-linecap="round"/>
+ </svg></div>`;
 const carNode=document.createElement('div');carNode.className='car-wrap';carNode.style.width='16px';carNode.style.height='26px';carNode.innerHTML=carSvg;
 const car=new A.Marker({position:points[0].xy,content:carNode,anchor:'top-left',offset:new A.Pixel(-8,-13),zIndex:2000,bubble:true});map.add(car);
 books.forEach((b,bi)=>{
